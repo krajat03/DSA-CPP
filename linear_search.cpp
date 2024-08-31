@@ -3,6 +3,7 @@ using namespace std;
 
 int main()
 {
+    
     int key;
     cout << "Key: ";
     cin >> key;
