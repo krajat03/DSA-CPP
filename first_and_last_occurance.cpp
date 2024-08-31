@@ -52,8 +52,8 @@ int lastOcc(int arr[], int size, int key)
 }
 int main()
 {
-    int even[7] = {0, 1, 1, 2, 2, 2, 4};
-    cout << "First ocuurance of 2 at index: "<< firstOcc(even, 7, 2) << endl;
+    int even[7] = {1, 1, 1, 2, 2, 2, 4};
+    cout << "First ocuurance of 1 at index: "<< firstOcc(even, 7, 1) << endl;
     cout << "Last ocuurance of 2 at index: "<< lastOcc(even, 7, 2);
     return 0;
 }
