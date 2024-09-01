@@ -1,10 +1,10 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main()
 {
     
-    int key;
+    int key = 0;
     cout << "Key: ";
     cin >> key;
     cout << endl;
