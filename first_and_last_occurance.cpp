@@ -56,4 +56,5 @@ int main()
     cout << "First ocuurance of 1 at index: "<< firstOcc(even, 7, 1) << endl;
     cout << "Last ocuurance of 2 at index: "<< lastOcc(even, 7, 2);
     return 0;
-}   
+
+}
