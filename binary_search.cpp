@@ -1,21 +1,21 @@
 #include <iostream>
 using namespace std;
-int binarySearch(int arr[], int size, int key)
+int binarySearch(int arr[], int size, int target)
 {
     int start = 0;
     int end = size - 1;
     int mid = start + ((end - start)/ 2);
     while (start <= end)
     {
-        if (arr[mid] == key)
+        if (arr[mid] == target)
         {
             return mid;
         }
-        if (key > arr[mid])
+        if (target > arr[mid])
         {
             start = mid + 1;
         }
-        if (key < arr[mid])
+        if (target < arr[mid])
         {
             end = end - 1;
         }
