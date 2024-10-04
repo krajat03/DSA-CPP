@@ -3,22 +3,20 @@ using namespace std;
 
 int main()
 {
-    
+
     int key = 0;
     cout << "Key: ";
     cin >> key;
     cout << endl;
 
     int index = -1;
-    int array[5] = {1, 2, 8, 10, 16};
-    int length = sizeof(array) / sizeof(int);
+    vector<int> array = {1, 2, 8, 10, 16};
 
-    for (int i = 0; i < length; i++)
+    for (int i = 0; i < array.size(); i++)
     {
         if (array[i] == key)
         {
             index = i;
-            break;
         }
     }
 
