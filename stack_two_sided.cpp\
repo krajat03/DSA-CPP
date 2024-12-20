@@ -1,0 +1,128 @@
+#include <iostream>
+using namespace std;
+class stack
+{
+public:
+    int size;
+    int *arr;
+    int top1;
+    int top2;
+
+    stack(int size)
+    {
+        this->size = size;
+        arr = new int[size];
+        top1 = -1;
+        top2 = size;
+    }
+
+    void push1(int element)
+    {
+        if (size - top1 > 1)
+        {
+            top1++;
+            arr[top1] = element;
+        }
+        else
+        {
+            cout << "Stack for top1 is full" << endl;
+        }
+    }
+    void push2(int element)
+    {
+        if (top2 - top1 > 1)
+        {
+            top2--;
+            arr[top2] = element;
+        }
+        else
+        {
+            cout << "Stack for top2 is full" << endl;
+        }
+    }
+    void pop1()
+    {
+        if (top1 >= 0)
+        {
+            cout << "Pop1 element is = " << arr[top1] << endl;
+            top1--;
+        }
+        else
+        {
+            cout << "Stack is empty for pop1" << endl;
+        }
+    }
+    void pop2()
+    {
+        if (top2 < size)
+        {
+            cout << "Pop2 element is = " << arr[top2] << endl;
+            top2++;
+        }
+        else
+        {
+            cout << "Stack is empty for pop2" << endl;
+        }
+    }
+    void peek1()
+    {
+        if (top1 >= 0)
+        {
+            cout << "top1 element is =  " << arr[top1] << endl;
+        }
+        else
+        {
+            cout << "Stack is empty for top1" << endl;
+        }
+    }
+    void peek2()
+    {
+        if (top2 < size)
+        {
+            cout << "top2 element is = " << arr[top2] << endl;
+        }
+        else
+        {
+            cout << "Stack is empty for top2" << endl;
+        }
+    }
+    bool isEmpty1()
+    {
+        if (top1 >= 0)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+    void display()
+    {
+        int i = size;
+        cout << "Elemtnts are: ";
+        while (i >= 0)
+        {
+            cout << arr[i] << ", ";
+            i--;
+        }
+        cout << endl;
+    }
+};
+int main()
+{
+    stack s(9);
+    s.push1(1);
+    s.push1(2);
+    s.push1(3);
+    s.push1(4);
+    s.push1(5);
+    s.push2(9);
+    s.push2(8);
+    s.push2(7);
+    s.push2(6);
+
+    s.display();
+
+    return 0;
+}

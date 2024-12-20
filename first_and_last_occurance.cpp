@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-int firstOcc(int arr[], int size, int key)
+int firstOcc(int arr[], int size, int target)
 {
     int start = 0;
     int end = size - 1;
@@ -8,16 +8,16 @@ int firstOcc(int arr[], int size, int key)
     int ans = -1;
     while (start <= end)
     {
-        if (arr[mid] == key)
+        if (arr[mid] == target)
         {
             ans = mid;
             end = mid - 1;
         }
-        else if (key > arr[mid])
+        else if (target > arr[mid])
         {
             start = mid + 1;
         }
-        else if (key < arr[mid])
+        else if (target < arr[mid])
         {
             end = mid - 1;
         }
@@ -25,7 +25,7 @@ int firstOcc(int arr[], int size, int key)
     }
     return ans;
 }
-int lastOcc(int arr[], int size, int key)
+int lastOcc(int arr[], int size, int target)
 {
     int start = 0;
     int end = size - 1;
@@ -33,16 +33,16 @@ int lastOcc(int arr[], int size, int key)
     int ans = -1;
     while (start <= end)
     {
-        if (arr[mid] == key)
+        if (arr[mid] == target)
         {
             ans = mid;
             start = mid + 1;
         }
-        else if (key > arr[mid])
+        else if (target > arr[mid])
         {
             start = mid + 1;
         }
-        else if (key < arr[mid])
+        else if (target < arr[mid])
         {
             end = mid - 1;
         }
